@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4705316e-5f2c-4793-b56c-9d3779a9ea6e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GTMoviesStore/static/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/GTMoviesStore/static/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GTMoviesStore/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/GTMoviesStore/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GTMoviesStore/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/GTMoviesStore/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +115,8 @@
       <workItem from="1738200890491" duration="181000" />
       <workItem from="1738201104834" duration="1449000" />
       <workItem from="1738281450883" duration="1323000" />
-      <workItem from="1738449928711" duration="8205000" />
+      <workItem from="1738449928711" duration="9654000" />
+      <workItem from="1738481778140" duration="2388000" />
     </task>
     <servers />
   </component>
