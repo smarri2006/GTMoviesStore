@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4705316e-5f2c-4793-b56c-9d3779a9ea6e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GTMoviesStore/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/GTMoviesStore/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -51,6 +53,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "C:/Users/snappymink/AppData/Roaming/JetBrains/PyCharm2024.3/node/versions/22.13.1/node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.nodejs",
     "vue.rearranger.settings.migration": "true"
@@ -113,7 +116,7 @@
       <workItem from="1738281450883" duration="1323000" />
       <workItem from="1738449928711" duration="9654000" />
       <workItem from="1738481778140" duration="2388000" />
-      <workItem from="1738538262132" duration="1063000" />
+      <workItem from="1738538262132" duration="2192000" />
     </task>
     <servers />
   </component>
