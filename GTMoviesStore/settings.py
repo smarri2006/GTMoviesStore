@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'movies',
     'accounts',
+    'cart',
 ]
 
 MIDDLEWARE = [
