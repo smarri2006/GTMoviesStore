@@ -1,15 +1,36 @@
 from django.shortcuts import render
-from django.contrib.auth import login as auth_login, authenticate, logout as auth_logout
+from django.contrib.auth import login as auth_login, authenticate, logout as auth_logout, update_session_auth_hash
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
-from .forms import CustomUserCreationForm, CustomErrorList
+from .forms import CustomUserCreationForm, CustomErrorList, CustomPasswordChangeForm
 from django.contrib.auth.decorators import login_required
+
+def changepasswordcomplete(request):
+    return render(request, 'accounts/changepasswordcomplete.html')
+@login_required
+def changepassword(request):
+    template_data = {}
+    template_data['title'] = 'Change Password'
+    if request.method == 'GET':
+        template_data['form'] = CustomPasswordChangeForm(request.user)
+        return render(request, 'accounts/changepassword.html', {'template_data': template_data})
+    elif request.method == 'POST':
+        form = CustomPasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            return redirect('accounts.changepasswordcomplete') # do later
+        else:
+            template_data['form'] = CustomPasswordChangeForm(request.user, request.POST)
+    return render(request, 'accounts/changepassword.html', {'template_data': template_data})
+
 
 @login_required
 def logout(request):
     auth_logout(request)
     return redirect('home.index')
+
 def login(request):
     template_data = {}
     template_data['title'] = 'Login'
@@ -33,8 +54,7 @@ def signup(request):
     template_data['title'] = 'Sign Up'
     if request.method == 'GET':
         template_data['form'] = CustomUserCreationForm()
-        return render(request, 'accounts/signup.html',
-            {'template_data': template_data})
+        return render(request, 'accounts/signup.html',{'template_data': template_data})
     elif request.method == 'POST':
         form = CustomUserCreationForm(request.POST, error_class=CustomErrorList)
         if form.is_valid():
@@ -42,8 +62,7 @@ def signup(request):
             return redirect('accounts.login')
         else:
             template_data['form'] = form
-            return render(request, 'accounts/signup.html',
-                          {'template_data': template_data})
+            return render(request, 'accounts/signup.html',{'template_data': template_data})
 
 @login_required
 def orders(request):
