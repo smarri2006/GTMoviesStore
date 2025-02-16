@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 # Create your views here.
 def index(request):
+    return redirect('movies.index')
     template_data = {}
     template_data['title'] = 'GT Movies Store'
     return render(request, 'home/index.html', {'template_data': template_data})
